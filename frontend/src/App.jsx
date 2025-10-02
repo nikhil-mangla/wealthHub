@@ -5,8 +5,11 @@ import axios from "axios";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { Menu, X, TrendingUp, Shield, Target, Users, Mail, Phone, MapPin, LogOut, Plus, Trash2 } from "lucide-react";
 
-const BACKEND_URL = import.meta?.env?.VITE_BACKEND_URL || "http://localhost:8000";
+console.log("VITE_BACKEND_URL =", import.meta.env.VITE_BACKEND_URL);
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://wealthhub.onrender.com";
 const API = `${BACKEND_URL}/api`;
+console.log("Using API:", API);
 
 const AuthContext = createContext(null);
 
